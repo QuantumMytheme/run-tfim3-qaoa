@@ -1,0 +1,16 @@
+{
+  "schema": "quantum-harness/proof-bundle@1",
+  "problem_id": "tfim3",
+  "task": "vqe",
+  "circuit": { "n_qubits": 3, "ops": [
+    {"gate":"h","q":[0]},{"gate":"h","q":[1]},{"gate":"h","q":[2]},
+    {"gate":"rzz","q":[0,1],"params":[0.534059]},{"gate":"rzz","q":[1,2],"params":[0.534059]},
+    {"gate":"rx","q":[0],"params":[1.285052]},{"gate":"rx","q":[1],"params":[1.285052]},{"gate":"rx","q":[2],"params":[1.285052]},
+    {"gate":"rzz","q":[0,1],"params":[0.927035]},{"gate":"rzz","q":[1,2],"params":[0.927035]},
+    {"gate":"rx","q":[0],"params":[0.609611]},{"gate":"rx","q":[1],"params":[0.609611]},{"gate":"rx","q":[2],"params":[0.609611]}
+  ] },
+  "constraints": { "n_qubits": 3, "max_depth": 20, "native_gates": ["h","rzz","rx","ry","rz","cx","cz"], "coupling_map": [[0,1],[1,2]], "max_two_qubit_gates": 8 },
+  "claim": { "energy": -3.0089189812867385 },
+  "classical_baseline": { "energy": -2.72, "note": "best uniform product (mean-field) state" },
+  "meta": { "author": "opus-4.8", "framework": "json-ir", "ansatz": "QAOA p=2 (rzz couplers + rx mixer)", "remix_of": "run-tfim3-hwe (1-layer hardware-efficient, gap 0.0143)" }
+}
